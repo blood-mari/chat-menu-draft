@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 h2,
 h3,
 p,
@@ -29,12 +37,30 @@ img {
 
 :root {
     --font-family: 'Poppins', sans-serif;
+    --font-counter: 'Roboto', sans-serif;
+    --btn-font: 'Fugaz One', cursive;
     --shadow-normal: drop-shadow(0px 0px 2px rgba(80, 155, 245, 0.56));
-    --shadow-hover: drop-shadow(0px 0px 2px rgba(255, 253, 254, 0.56)), drop-shadow(0px 0px 8px #FF069A), drop-shadow(-1.4px 1.4px 1.6px rgba(28, 45, 87, 0.56));
-    --background-color: rgba(30, 50, 100, 0.72);
-    --notification-bgr-color:  #18274C;
-    --input-accent-color: #509BF5;
 
+    --background-color: rgba(30, 50, 100, 0.72);
+    ;
+    --notification-bgr-color:  #18274C;
+    --accent-color: #509BF5;
+
+    --btn-font-color: #fff;
+    --stroke-color: rgba(255, 255, 255, 1);
+    --stroke-hover-color: rgba(255, 253, 254, 0.56);
+    --fill-color: rgba(255, 255, 255, 1);
+    --fill-hover-color: rgba(255, 6, 154);
+    --btn-primary-color: rgba(80, 155, 245, 1);
+    --counter-color: rgba(240, 55, 165, 1);
+    --accent-btn-primary-color:  rgba(240, 55, 165, 1);
+    --hover-icon-shadow: drop-shadow(0 0 8px rgba(255, 6, 154));
+    --btn-cecondary-color: #FF6437;
+    --drop-shadow-primary-btn: drop-shadow(0px 1px 1px 0px rgba(17, 94, 187, 0.32));
+    --drop-shadow-active-primary-btn-active: box-shadow: 0px 2px 1px 0px rgba(142, 24, 94, 0.64);
+
+    --drop-shadow-second-btn: drop-shadow(0px 1px 1px 0px rgba(185, 140, 25, 0.32));
+    --drop-shadow-icon: drop-shadow(0px 0px 2px  rgba(80, 155, 245, 0.56));
 }
 
 .body {
@@ -65,56 +91,73 @@ font-size: 15px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: calc(100% / 3);
+    width: calc((100% - 30px)/ 3);
+    padding-right: 10px;
 }
 
 .control-pannel {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: calc(100% / 5);
+    width: calc((100%) / 5);
     border-left: 1px solid #8095C9;
     /* transform: rotate(90deg); */
-    padding-left: 24px;
+    padding-left: 7px;
 }
 
-.notification {
-    background-color: var(--notification-bgr-color);
-    padding: 15px;
+.notification-container {
+    padding: 9px;
+    padding-left: 10px;
     color: white;
     text-align: center;
+
+    /* width: calc((100% - 20px) / 2); */
+    /* display: flex;
+    justify-content: space-evenly;
+    flex-direction: row; */
+}
+
+.notification-bgr {
+    background-color: var(--notification-bgr-color);
     border-radius: 16px;
-    width: calc((100% - 10px) / 3)
 }
 
 .avatar-icon {
     background-image: url(./images/avatar.png);
-    border: 2px solid #509BF5;
+    border: 2px solid var(--accent-color);
     border-radius: 36px;
     /* border: 1.6px solid #F037A5; */
     position: absolute;
-    left: -2px;
-    top: -10px;
+    left: -20px;
+    top: -10;
+    z-index: 2;
     width: 80px;
     height: 80px;
 }
 
 .icon {
-    fill:  rgba(255, 255, 255, 1);
+    /* fill: var(--fill-color);
     stroke-width: 1px;
-    stroke: rgba(255, 255, 255, 1);
-    filter: drop-shadow(0px 0px 2px  rgba(80, 155, 245, 0.56));
+    stroke: var(--stroke-color);
+    filter: var(--drop-shadow-icon); */
+
+    background-image: url('./images/css_sprites.png');
+}
+
+.icon__options {
+    width: 24px;
+    height: 24px;
 }
 
 .icon:hover, .icon:focus  {
-    /* filter: drop-shadow(-1.4px 1.4px 1.6px rgba(28, 45, 87, 0.56)); */
-    /* box-shadow: 0 0 2px rgba(255, 253, 254, 0.56); */
-    /* filter: drop-shadow(0 0 8px rgba(255, 6, 154)); */
-    filter: drop-shadow(0 0 8px rgba(255, 6, 154));
+    width: 24px;
+    height: 24px;
 
-    stroke: rgba(255, 253, 254, 0.56);
-    fill: rgba(255, 6, 154);
+}
 
+.iconmidi {
+    width: 18px;
+    height: 18px;
 }
 
 .is-hidden {
@@ -123,4 +166,303 @@ font-size: 15px;
     width: 1px;
     height: 1px;
     margin: -1px;
+}
+
+.btn-container {
+    margin-left: 55px;
+}
+
+.btn {
+    font-family: var(--btn-font);
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 0.9;
+    padding: 16px;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    color: var(--btn-font-color);
+}
+
+button + button {
+    margin-left: 10px;
+}
+
+.primary-btn {
+    background-color: var(--btn-primary-color);
+    min-width: 165px;
+    filter: var(--drop-shadow-primary-btn);
+}
+
+.primary-btn:hover {
+    filter: var(--drop-shadow-active-primary-btn-active);
+    background-color: var(--accent-btn-primary-color);
+}
+
+.secondary-btn {
+    background-color: var(--btn-cecondary-color);
+    filter: var(--drop-shadow-second-btn);
+}
+
+.got-container__mail {
+    position: relative;
+}
+
+.got-container__notify {
+    position: relative;
+}
+
+.counter {
+    background-color: var(--counter-color);
+    color: var(--btn-font-color);
+    font-family: var(--font-counter);
+    font-size: 9px;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    z-index: 2;
+    right: -30%;
+    top: -25%;
+
+}
+
+.counter__notify {
+    right: -25%;
+}
+
+.icon__smile{
+    background-position: -230px -54px;
+    margin-right: 3px;
+}
+
+.icon__smile:hover, .icon__smile:focus {
+    background-position: -230px -98px;
+}
+
+.icon__mic {
+    background-position: -54px -142px;
+}
+
+.icon__mic:hover, .icon__mic:focus {
+    background-position: -142px -142px;
+}
+
+.icon__mic-off {
+    background-position: -10px -142px;
+}
+
+.icon__mic-off:hover, .icon__mic-off:focus {
+    background-position: -98px -142px;
+}
+
+.icon__adduser {
+    background-position: -10px -10px;
+}
+
+.icon__adduser:hover, .icon__adduser:focus {
+    background-position: -54px -10px;
+}
+
+.icon__video{
+    background-position: -54px -230px;
+}
+
+.icon__video:hover, .icon__video:focus {
+    background-position: -142px -230px;
+}
+
+.icon__video-off {
+    background-position: -10px -230px;
+}
+
+.icon__video-off:hover, .icon__video-off:focus {
+    background-position: -98px -230px;
+}
+
+.icon__mail {
+    background-position: -142px -10px;
+}
+
+.icon__mail:hover, .icon__mail:focus {
+    background-position: -142px -98px;
+}
+
+.icon__mail-count {
+    background-position: -98px -98px;
+}
+
+.icon__mail-count:hover, .icon__mail-count:focus {
+    background-position: -142px -54px;
+}
+
+.icon__notify {
+    background-position: -186px -54px;
+}
+
+.icon__notify:hover, .icon__notify:focus {
+    background-position: -186px -42px;
+}
+
+.icon__notify-count {
+    background-position: -186px -10px;
+}
+
+.icon__notify-count:hover, .icon__notify-count:focus {
+    background-position: -186px -98px;
+}
+
+.icon__camera {
+    background-position: -10px -98px;
+}
+
+.icon__camera:hover, .icon__camera:focus {
+    background-position: -54px -98px;
+}
+
+.icon__volume {
+    background-position: -186px -230px;
+}
+
+.icon__volume:hover, .icon__volume:focus {
+    background-position: -230px -230px;
+}
+
+.icon__settings {
+    background-position: -186px -186px;
+}
+
+.icon__settings:hover, .icon__settings:focus {
+    background-position: -230px -10px;
+}
+
+.icon__question {
+    background-position: -10px -186px;
+}
+
+.icon__question:hover, .icon__question:focus {
+    background-position: -54px -186px;
+}
+
+.icon__arrowdown {
+    background-position: -10px -54px;
+}
+
+.icon__arrowdown:hover, .icon__arrowdown:focus {
+    background-position: -54px -54px;
+}
+
+.icon__attach {
+    background-position: -98px -10px;
+}
+
+.icon__attach:hover, .icon__attach:focus {
+    background-position: -98px -54px;
+}
+
+.icon__close {
+    background-position: -274px -10px;
+    /* 18px */
+}
+
+.icon__close:hover, .icon__close:focus {
+    background-position: -274px -48px;
+    /* 18px */
+}
+
+.icon__closemini {
+    background-position: -198px -274px;
+    width: 8px;
+    height: 8px;
+}
+
+.icon__closemini:hover, .icon__closemini:focus {
+    background-position: -226px -274px;
+    width: 8px;
+    height: 8px;
+}
+
+.icon__edit {
+    background-position: -274px -86px;
+    /* 18px */
+}
+
+.icon__edit:hover, .icon__edit:focus {
+    background-position: -274px -124px;
+    /* 18px */
+}
+
+.icon__infocircle {
+    background-position: -274px -162px;
+    /* 18px */
+}
+
+.icon__infocircle:hover, .icon__infocircle:focus {
+    background-position: 0 0;
+    /* 18px */
+}
+
+.icon__ok {
+    background-position: -274px -200px;
+    /* 18px */
+}
+
+.icon__ok:hover, .icon__ok:focus {
+    background-position: -10px -274px;
+    /* 18px */
+}
+
+.icon__rangecircle {
+    background-position: -274px -238px;
+    width: 16px;
+    height: 16px;
+}
+
+.icon__rangecircle--active {
+    background-position: -162px -274px;
+    width: 16px;
+    height: 16px;
+}
+
+.icon__reply {
+    background-position: -48px -274px;
+    /* 18px */
+}
+
+.icon__reply:hover, .icon__reply:focus {
+    background-position: -86px -274px;
+    /* 18px */
+}
+
+.icon__send {
+    background-position: -98px -186px;
+    /* 24px */
+}
+
+.icon__send:hover, .icon__send:focus {
+    background-position: -142px -186px;
+    /* 24px */
+}
+
+.icon__star {
+    background-position: -124px -274px;
+    /* 18px */
+}
+
+.icon__user {
+    background-position: -230px -142px;
+    /* 24px */
+}
+
+.icon__user:hover, .icon__user:focus {
+    background-position: -230px -186px;
+    /* 24px */
 }
