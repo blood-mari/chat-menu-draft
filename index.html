@@ -6,14 +6,14 @@
     <title>Chat-draft</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins&display=swap&family=Roboto&display=swap" >
-<link rel="preload" href="./images/css_sprites.png">
+<link rel="preload" href="./images/css_sprites.png" as="image">
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body class="body">
 
 <div class="container">
     <div class="wrapper">
-        <div class='avatar-icon'></div>
+        <div class='avatar-icon main-pannel-icon'></div>
         <div class="container__notification">
             <div class="notification__btn-container">
                 <button class="btn secondary-btn">
@@ -48,14 +48,18 @@
             </div>
 
             <div class="got-container got-container__notify">
-                <div class="notify__table pop-up-window">
+                <div class="wrapper__pop-up-window notify__table pop-up-window is-hidden">
                     <div class="notify__title-box">
                         <h2 class="notify__table--title">notifications</h2>
                         <p class="notify__table--counter">26 accept all</p>
                     </div>
                     <div class="notify__inbox--string">
                         <div class="notify__table--info">
-                            <div class="wrapper__notify__table--icon"><div class="notify__table--icon icon icon__options "></div></div>
+                            <div class="notify__table--icon--sub">
+                                <div class="wrapper__notify__table--icon">
+                                    <div class="notify__table--icon icon__options "></div>
+                                </div>
+                            </div>
                             <div class="notify__user-inbox">
                                 <span class="notify__table--time">11:00 AM</span>
                                 <p class="notify__table--text">Ivan invites you to the group</p>
@@ -78,6 +82,53 @@
                 <div class="icon icon__options icon__volume"></div>
             </div>
             <div>
+                <div class="wrapper__pop-up-window settings__table pop-up-window">
+                    <h2 class="settings__table-title">Settings</h2>
+                    <div class="settings__change-avatar-box">
+                        <div class="settings__user-data">
+                            <div class="avatar-icon"></div>
+                            <div class="settings__text-user-data">
+                                <p class="settings__user-name">Nicolay</p>
+                                <p class="settings__change-avatar">Edit avatar</p>
+                            </div>
+                        </div>
+                        <div class="icon iconmidi icon__edit"></div>
+                    </div>
+                    <div class="settings__block">
+                        <p class="settings__box-title">Microphone</p>
+                        <div class="button-layer">
+                            <button class="dropdown-btn settings__mic">
+                                <span class="dropdown-btn--text">Intel microphone</span>
+                                <span class="icon icon__options icon__arrowdown"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="settings__volume-level">
+                        <h3 class="volume-level__title">Speak for sound check</h3>
+                        <span></span>
+                    </div>
+                    <div class="settings-block__border"></div>
+                    <div class="settings__block settings__block--border">
+                        <p class="settings__box-title">Speakers</p>
+                        <div class="button-layer">
+                            <button class="dropdown-btn settings__mic">
+                                <span class="dropdown-btn--text">Intel microphone</span>
+                                <span class="icon icon__options icon__arrowdown"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="settings-block__border"></div>
+                    <div class="settings__block">
+                        <p class="settings__box-title">Camera</p>
+                        <div class="button-layer">
+                            <button class="dropdown-btn settings__mic">
+                                <span class="dropdown-btn--text">Intel web camera</span>
+                                <span class="icon icon__options icon__arrowdown"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <div class="icon icon__options icon__settings"></div>
             </div>
             <div>
