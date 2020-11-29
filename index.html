@@ -5,63 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat-draft</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins&display=swap&family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins&display=swap&family=Roboto&display=swap" >
+<link rel="preload" href="./images/css_sprites.png">
 <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<body class="body">
 
 <div class="container">
-    <div class='avatar-icon'></div>
-    <div class="notification-container">
-        <div class="notification__btn-container">
-            <button class="btn secondary-btn">
-                <span>Scan QR</span>
-            </button>
-            <button class='btn primary-btn'>
-                <span>Leave the group</span>
-            </button>
-        </div>
-        <div class="notification__status is-hidden"><span class="">Sit at the table</span></div>
-    </div>
-
-    <div class="options">
-        <div class="icon icon__options icon__smile"></div>
-        <div class="icon icon__options icon__adduser"></div>
-        <div >
-            <div class="icon icon__options icon__mic"></div>
-            <div class="icon icon__options icon__mic-off is-hidden"></div>
-        </div>
-        <div >
-            <div class="icon icon__options icon__video"></div>
-            <div class="icon icon__options icon__video-off is-hidden"></div>
+    <div class="wrapper">
+        <div class='avatar-icon'></div>
+        <div class="container__notification">
+            <div class="notification__btn-container">
+                <button class="btn secondary-btn">
+                    <span>Scan QR</span>
+                </button>
+                <button class='btn primary-btn'>
+                    <span>Leave the group</span>
+                </button>
+            </div>
+            <div class="notification__status is-hidden"><span class="">Sit at the table</span></div>
         </div>
 
-        <div class="got-container got-container__mail">
-            <span class="counter counter__mail">8</span>
-            <div class="icon icon__options icon__mail is-hidden"></div>
-            <div class="icon icon__options icon__mail-count"></div>
+        <div class="container__options">
+            <div class="wrapper__options--smile">
+                <div class="container__smile is-hidden pop-up-window">Send reaction</div>
+                <div class="icon icon__options icon__smile"></div></div>
+            <div class="icon icon__options icon__adduser"></div>
+            <div >
+                <div class="icon icon__options icon__mic"></div>
+                <div class="icon icon__options icon__mic-off is-hidden"></div>
+            </div>
+            <div >
+                <div class="icon icon__options icon__video"></div>
+                <div class="icon icon__options icon__video-off is-hidden"></div>
+            </div>
 
+            <div class="got-container got-container__mail">
+                <span class="counter counter__mail">8</span>
+                <div class="icon icon__options icon__mail is-hidden"></div>
+                <div class="icon icon__options icon__mail-count"></div>
+
+            </div>
+
+            <div class="got-container got-container__notify">
+                <div class="notify__table pop-up-window">
+                    <div class="notify__title-box">
+                        <h2 class="notify__table--title">notifications</h2>
+                        <p class="notify__table--counter">26 accept all</p>
+                    </div>
+                    <div class="notify__inbox--string">
+                        <div class="notify__table--info">
+                            <div class="wrapper__notify__table--icon"><div class="notify__table--icon icon icon__options "></div></div>
+                            <div class="notify__user-inbox">
+                                <span class="notify__table--time">11:00 AM</span>
+                                <p class="notify__table--text">Ivan invites you to the group</p>
+                            </div>
+                        </div>
+                        <p class="notify__table--accept">Accept</p>
+                    </div>
+                </div>
+                <span class="counter counter__notify">8</span>
+                <div class="icon icon__options icon__notify is-hidden"></div>
+                <div class="icon icon__options icon__notify-count"></div>
+            </div>
         </div>
 
-        <div class="got-container got-container__notify">
-            <span class="counter counter__notify">8</span>
-            <div class="icon icon__options icon__notify is-hidden"></div>
-            <div class="icon icon__options icon__notify-count"></div>
-        </div>
-    </div>
-
-    <div class="control-pannel">
-        <div>
-            <div class="icon icon__options icon__camera"></div>
-        </div>
-        <div>
-            <div class="icon icon__options icon__volume"></div>
-        </div>
-        <div>
-            <div class="icon icon__options icon__settings"></div>
-        </div>
-        <div>
-            <div class="icon icon__options icon__question"></div>
+        <div class="control-pannel">
+            <div>
+                <div class="icon icon__options icon__camera"></div>
+            </div>
+            <div>
+                <div class="icon icon__options icon__volume"></div>
+            </div>
+            <div>
+                <div class="icon icon__options icon__settings"></div>
+            </div>
+            <div>
+                <div class="icon icon__options icon__question"></div>
+            </div>
         </div>
     </div>
 
