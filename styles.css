@@ -44,16 +44,15 @@ img {
     --background-color: rgba(30, 50, 100, 0.72);
     ;
     --notification-bgr-color:  #18274C;
-    --accent-color: #509BF5;
+    --accent-color: rgba(80, 155, 245, 1);;
+    --border-avatar-color: #1E3264;
 
     --btn-font-color: #fff;
     --stroke-color: rgba(255, 255, 255, 1);
     --stroke-hover-color: rgba(255, 253, 254, 0.56);
     --fill-color: rgba(255, 255, 255, 1);
     --fill-hover-color: rgba(255, 6, 154);
-    --btn-primary-color: rgba(80, 155, 245, 1);
-    --counter-color: rgba(240, 55, 165, 1);
-    --accent-btn-primary-color:  rgba(240, 55, 165, 1);
+    --active-color: rgba(240, 55, 165, 1);
     --hover-icon-shadow: drop-shadow(0 0 8px rgba(255, 6, 154));
     --btn-cecondary-color: #FF6437;
     --drop-shadow-primary-btn: drop-shadow(0px 1px 1px 0px rgba(17, 94, 187, 0.32));
@@ -77,21 +76,22 @@ font-size: 15px;
     align-items: center;
     backdrop-filter: blur(16px);
     border-radius: 24px;
-    width: 735px;
+    min-width: 709px;
+    max-width: 780px;
     position: absolute;
     top: 100%;
     left: 50%;
 
     transform: translate(-50%, -50%);
-    padding-top: 9px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .options {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: calc((100% - 30px)/ 3);
+    width: calc((100%)/ 2.5);
     padding-right: 10px;
 }
 
@@ -99,40 +99,42 @@ font-size: 15px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: calc((100%) / 5);
+    width: calc((100%) / 4);
     border-left: 1px solid #8095C9;
     /* transform: rotate(90deg); */
     padding-left: 7px;
 }
 
 .notification-container {
-    padding: 9px;
+    padding: 2px;
     padding-left: 10px;
     color: white;
     text-align: center;
 
-    /* width: calc((100% - 20px) / 2); */
-    /* display: flex;
-    justify-content: space-evenly;
-    flex-direction: row; */
+    width: calc((100%) / 2);
 }
 
-.notification-bgr {
+.notification__status {
     background-color: var(--notification-bgr-color);
     border-radius: 16px;
+    padding: 16px;
+    padding-left: 80px;
+    font-size: 15px;
+    line-height: 1.1;
+    text-align: start;
 }
 
 .avatar-icon {
     background-image: url(./images/avatar.png);
     border: 2px solid var(--accent-color);
     border-radius: 36px;
-    /* border: 1.6px solid #F037A5; */
     position: absolute;
-    left: -20px;
-    top: -10;
+    left: -12px;
+    /* top: -10px; */
     z-index: 2;
     width: 83px;
     height: 83px;
+    box-shadow: 0px 0px 2px rgba(92, 41, 66, 0.56), 0px 0px 8px rgba(80, 155, 245, 0.51);
 }
 
 .icon {
@@ -168,8 +170,14 @@ font-size: 15px;
     margin: -1px;
 }
 
-.btn-container {
-    margin-left: 55px;
+.notification__btn-container {
+    margin-left: 65px;
+    padding-right: 5px;
+    min-width: 180px;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
 
 .btn {
@@ -189,19 +197,20 @@ button + button {
 }
 
 .primary-btn {
-    background-color: var(--btn-primary-color);
-    min-width: 165px;
+    background-color: var(--accent-color);
+    min-width: 164px;
     filter: var(--drop-shadow-primary-btn);
 }
 
 .primary-btn:hover {
     filter: var(--drop-shadow-active-primary-btn-active);
-    background-color: var(--accent-btn-primary-color);
+    background-color: var(--active-color);
 }
 
 .secondary-btn {
     background-color: var(--btn-cecondary-color);
     filter: var(--drop-shadow-second-btn);
+    min-width: 100px;
 }
 
 .got-container__mail {
@@ -213,7 +222,7 @@ button + button {
 }
 
 .counter {
-    background-color: var(--counter-color);
+    background-color: var(--active-color);
     color: var(--btn-font-color);
     font-family: var(--font-counter);
     font-size: 9px;
@@ -230,8 +239,8 @@ button + button {
 
     position: absolute;
     z-index: 2;
-    right: -30%;
-    top: -25%;
+    right: -35%;
+    top: -30%;
 
 }
 
