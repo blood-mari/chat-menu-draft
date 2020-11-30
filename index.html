@@ -83,13 +83,22 @@
                 <div class="icon icon__options icon__camera"></div>
             </div>
             <div>
-                <div class="volume-pop-up-window--wrapper is-hidden pop-up-window ">
+                <div class="volume-pop-up-window--wrapper pop-up-window is-hidden">
                     <h2 class="volume-pop-up-window--title">Volume</h2>
-                    <p class="volume-pop-up-window--subtitle">Screen</p>
-                    <div class="slidercontainer"><input class="slider" type="range"></div>
-                    <div class="">
-                        <p class="volume-pop-up-window--subtitle">Group</p>
-                        <div class="slidercontainer"><input class="slider" type="range"></div>
+                    <div class="volumebox__screen">
+                        <label for="volumescreen" class="volume__subtitle subtitle">Screen</label>
+                        <input class="slider" id="volumescreen" type="range" value="50">
+                        <!-- <div class="slidecontainer">
+
+                        </div> -->
+                    </div>
+                    <div class="volumebox__group">
+                        <label for="volumegroup" class="volume__subtitle subtitle">Group</label>
+                        <input class="slider" id="volumegroup" type="range" value="50">
+
+                        <!-- <div class="slidecontainer volume__input">
+
+                        </div> -->
                     </div>
                 </div>
                 <div class="icon icon__options icon__volume"></div>
@@ -108,7 +117,7 @@
                         <div class="icon iconmidi icon__edit"></div>
                     </div>
                     <div class="settings__block">
-                        <p class="settings__box-title">Microphone</p>
+                        <p class="settings__box-title subtitle">Microphone</p>
                         <div class="button-layer">
                             <button class="dropdown-btn settings__mic">
                                 <span class="dropdown-btn--text">Intel microphone</span>
@@ -123,7 +132,7 @@
                     </div>
                     <div class="settings-block__border"></div>
                     <div class="settings__block settings__block--border">
-                        <p class="settings__box-title">Speakers</p>
+                        <p class="settings__box-title subtitle">Speakers</p>
                         <div class="button-layer">
                             <button class="dropdown-btn settings__mic">
                                 <span class="dropdown-btn--text">Intel microphone</span>
@@ -133,7 +142,7 @@
                     </div>
                     <div class="settings-block__border"></div>
                     <div class="settings__block">
-                        <p class="settings__box-title">Camera</p>
+                        <p class="settings__box-title subtitle">Camera</p>
                         <div class="button-layer">
                             <button class="dropdown-btn settings__mic">
                                 <span class="dropdown-btn--text">Intel web camera</span>
