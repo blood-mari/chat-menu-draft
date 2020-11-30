@@ -11,8 +11,12 @@
 </head>
 <body class="body">
 
+
+
 <div class="container">
+    <div class="wrapper__pop-up-info is-hidden"><div class="pop-up-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div></div>
     <div class="wrapper">
+
         <div class='avatar-icon main-pannel-icon'></div>
         <div class="container__notification">
             <div class="notification__btn-container">
@@ -27,7 +31,7 @@
         </div>
 
         <div class="container__options">
-            <div class="wrapper__options--smile">
+            <div class="wrapper__options--smile ">
                 <div class="container__smile is-hidden pop-up-window">Send reaction</div>
                 <div class="icon icon__options icon__smile"></div></div>
             <div class="icon icon__options icon__adduser"></div>
@@ -79,10 +83,19 @@
                 <div class="icon icon__options icon__camera"></div>
             </div>
             <div>
+                <div class="volume-pop-up-window--wrapper is-hidden pop-up-window ">
+                    <h2 class="volume-pop-up-window--title">Volume</h2>
+                    <p class="volume-pop-up-window--subtitle">Screen</p>
+                    <div class="slidercontainer"><input class="slider" type="range"></div>
+                    <div class="">
+                        <p class="volume-pop-up-window--subtitle">Group</p>
+                        <div class="slidercontainer"><input class="slider" type="range"></div>
+                    </div>
+                </div>
                 <div class="icon icon__options icon__volume"></div>
             </div>
             <div>
-                <div class="wrapper__pop-up-window settings__table pop-up-window">
+                <div class="wrapper__pop-up-window settings__table pop-up-window is-hidden">
                     <h2 class="settings__table-title">Settings</h2>
                     <div class="settings__change-avatar-box">
                         <div class="settings__user-data">
@@ -105,7 +118,7 @@
                     </div>
 
                     <div class="settings__volume-level">
-                        <h3 class="volume-level__title">Speak for sound check</h3>
+                        <h3 class="settings__volume-level--title">Speak for sound check</h3>
                         <span></span>
                     </div>
                     <div class="settings-block__border"></div>

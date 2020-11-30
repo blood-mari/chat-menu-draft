@@ -48,6 +48,7 @@ img {
     --pop-up-window-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     --accent-color: rgba(80, 155, 245, 1);
     --border-avatar-color: #1E3264;
+    --pop-inf-color: rgba(24,39,76, 0.99);
 
     --btn-font-color: #fff;
     --chat-second-color: rgba(80, 155, 245, 1);
@@ -131,9 +132,31 @@ img {
     border-radius: 24px;
 }
 
+.wrapper__pop-up-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up-info {
+    background-color: var(--pop-inf-color);
+    border: 1px solid var(--pop-inf-color);
+    border-radius: 24px 24px 0 0;
+
+
+    padding: 15px 29px;
+    font-size: 15px;
+    white-space: pre-line;
+    word-wrap: break-word;
+    line-height: 1.4;
+    min-width: 270px;
+    max-width: 600px;
+    min-height: 40px;
+}
+
 .container__smile {
     position: absolute;
-    top: -280%;
+    bottom: 115%;
     right: 30%;
     min-width: 240px;
     min-height: 155px;
@@ -311,8 +334,8 @@ img {
 }
 
 .notify__table {
-    top: -930%;
-    right: -800%;
+    bottom: 205%;
+    right: -900%;
     padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
@@ -355,7 +378,7 @@ img {
 .wrapper__notify__table--icon {
     background: radial-gradient(63.8% 100% at 32.81% 0%, #2D3E6A 0%, #27365B 100%);
 
-    box-shadow: 0px 0px 2px 0px rgba(30,38,60,1);
+    box-shadow: 0px 0px 2px rgba(30,38,60,1);
 
     border: 1px solid transparent;
     border-radius: 16px;
@@ -402,13 +425,13 @@ border-radius: 12px;
 
     position: absolute;
     z-index: 2;
-    right: -35%;
-    top: -30%;
+    left: 65%;
+    bottom: 65%;
 
 }
 
 .settings__table {
-    top: -950%;
+    bottom: 115%;
     right: 0%;
     padding-top: 30px;
     padding-left: 30px;
@@ -493,7 +516,7 @@ border-radius: 12px;
     text-transform: capitalize;
 }
 
-.volume-level__title {
+.settings__volume-level--title {
     font-size: 15px;
     text-transform: capitalize;
     line-height: 1.1;
@@ -512,6 +535,16 @@ border-radius: 12px;
     border-bottom: 1px solid #2C3744;
     mix-blend-mode: screen;
     margin-top: 16px;
+}
+
+.volume-pop-up-window--wrapper {
+    min-width: 170px;
+    min-height: 113px;
+    padding: 24px;
+    position: absolute;
+    bottom: 115%;
+    left: 75%;
+    z-index: 4;
 }
 
 .icon__smile{
