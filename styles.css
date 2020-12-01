@@ -232,7 +232,7 @@ img {
     border: 2px solid var(--btn-font-color);
     border-radius: 36px;
     box-shadow: 0px 0px 16px rgba(255,98,191,1), 0px 0px 2px #FF62BF;
-    filter: blur(var(--blur-effect));
+    filter: var(--blur-effect);
 }
 
 .main-pannel-icon {
@@ -414,7 +414,7 @@ border-radius: 12px;
 
 .notify__table--icon {
     background: -142px -10px url('./images/css_sprites.png');
-    filter: blur(var(--blur-effect));
+    filter: var(--blur-effect);
 }
 
 .notify__user-inbox {

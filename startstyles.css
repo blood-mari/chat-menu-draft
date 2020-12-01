@@ -1,0 +1,52 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+h2,
+h3,
+p,
+h1,
+a,
+b,
+ul,
+div,
+input,
+label,
+div {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    max-width: 100%;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+  }
+
+body {
+    background-image: url(./images/bgr-img/yellowbgr.png);
+}
+
+:root {
+    --main-font-color: rgba(30,50,100,1);
+    --accent-color: rgba(80, 155, 245, 1);
+    --bgr-color: rgba(255,239,92,0.09);
+    --bgr-blur-effect: blur(6px);
+}
