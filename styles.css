@@ -122,6 +122,8 @@ img {
     padding-bottom: 5px;
 }
 
+/* Container main features */
+
 .container__options {
     display: flex;
     justify-content: space-around;
@@ -150,14 +152,16 @@ img {
     align-items: center;
 }
 
+/* Всплывающие собщения */
+
 .pop-up-info {
     background-color: var(--pop-inf-color);
     border: 1px solid var(--pop-inf-color);
-    border-radius: 24px 24px 0 0;
+    border-radius: 0 0 24px 24px;
 
 
-    padding: 15px 29px;
-    font-size: 15px;
+    padding: 10px 16px;
+    font-size: 12px;
     white-space: pre-line;
     word-wrap: break-word;
     line-height: 1.4;
@@ -182,6 +186,8 @@ img {
     padding-left: 30px;
 
 }
+
+/* Блок настроек */
 
 .control-pannel {
     display: flex;
@@ -876,3 +882,13 @@ input[type="range"]:focus {
     background-position: -230px -186px;
     /* 24px */
 }
+
+.icon-dop {
+    background-image: url(./images/css_sprites-1.png);
+}
+
+.icon-dop-exit {
+    background-position: -10px -10px;
+}
+
+/* CSS sprite-1 - иконки: exit, infocircle, map */
