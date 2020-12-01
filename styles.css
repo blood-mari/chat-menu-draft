@@ -150,6 +150,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-left: 20px;
 }
 
 /* Всплывающие собщения */
@@ -164,6 +166,7 @@ img {
     font-size: 12px;
     white-space: pre-line;
     word-wrap: break-word;
+    text-align: center;
     line-height: 1.4;
     min-width: 270px;
     max-width: 600px;
