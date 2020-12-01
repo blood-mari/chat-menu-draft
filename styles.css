@@ -232,7 +232,7 @@ img {
     border: 2px solid var(--btn-font-color);
     border-radius: 36px;
     box-shadow: 0px 0px 16px rgba(255,98,191,1), 0px 0px 2px #FF62BF;
-    filter: var(--blur-effect);
+    filter: blur(var(--blur-effect));
 }
 
 .main-pannel-icon {
@@ -414,7 +414,7 @@ border-radius: 12px;
 
 .notify__table--icon {
     background: -142px -10px url('./images/css_sprites.png');
-    filter: var(--blur-effect);
+    filter: blur(var(--blur-effect));
 }
 
 .notify__user-inbox {
@@ -725,7 +725,7 @@ input[type="range"]:focus {
 }
 
 .icon__notify:hover, .icon__notify:focus {
-    background-position: -186px -42px;
+    background-position: -186px -142px;
 }
 
 .icon__notify-count {
