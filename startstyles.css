@@ -40,13 +40,14 @@ img {
     font-family: inherit;
   }
 
-body {
-    background-image: url(./images/bgr-img/yellowbgr.png);
-}
-
 :root {
     --main-font-color: rgba(30,50,100,1);
     --accent-color: rgba(80, 155, 245, 1);
     --bgr-color: rgba(255,239,92,0.09);
     --bgr-blur-effect: blur(6px);
+}
+
+body {
+    background-image: top no-repeat url(./images/bgr-img/yellowbgr.png);
+    background-size: cover;
 }
