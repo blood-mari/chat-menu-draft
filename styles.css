@@ -695,7 +695,7 @@ input[type="range"]:focus {
     text-align: center;
 }
 
-.btn.primary-btn {
+.btn.push-up__btn {
     padding: 16px;
     min-width: 98px;
 }
