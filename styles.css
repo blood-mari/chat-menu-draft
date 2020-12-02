@@ -951,12 +951,35 @@ input[type="range"]:focus {
     /* 24px */
 }
 
+/* CSS sprite-1 - иконки: exit, infocircle, map */
+
 .icon-dop {
     background-image: url(./images/css_sprites-1.png);
+
 }
 
 .icon-dop-exit {
     background-position: -10px -10px;
 }
 
-/* CSS sprite-1 - иконки: exit, infocircle, map */
+.icon-dop-exit:hover, .icon-dop-exit:focus {
+    background-position: -54px -10px;
+}
+
+.icon-dop-inforcicle {
+    background-position: -10px -54px;
+}
+
+.icon-dop-inforcicle:hover, .icon-dop-inforcicle:focus {
+    background-position: -98px -10px;
+}
+
+.icon-dop-map {
+    background-position: -54px -54px;
+}
+
+.icon-dop-map:hover, .icon-dop-map:focus {
+    background-position: -98px -54px;
+}
+
+
