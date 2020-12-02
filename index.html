@@ -33,7 +33,7 @@
 
         <div class="container__options">
             <div>
-                <div class="icon-dop icon__options icon-dop-inforcicle">
+                <div class=" icon-dop icon__options icon-dop-inforcicle">
 
             </div>
             </div>
@@ -41,13 +41,39 @@
                 <div class="container__smile is-hidden pop-up-window">Send reaction</div>
                 <div class="icon icon__options icon__smile"></div>
             </div>
-            <div class="adduser__container is-hidden">
-                <div class="adduser__wrapper">
+            <div class="adduser__container ">
+                <div class="adduser__wrapper wrapper__pop-up-window pop-up-window">
                     <div class="adduser__title-box">
-                        <h2>Search friends</h2>
-                        <span></span>
+                        <h2 class="adduser__title">Invite friends</h2>
+                        <div>
+                            <span class="adduser__title-box--user-count">42</span>
+                            <span class="adduser__title-box--icon icon__options"></span>
+                        </div>
                     </div>
+                    <div class="adduser__content--wrapper">
+                        <div class="adduser__inbox--string">
+                            <div class="adduser-friend__container">
+                                <div class=" adduser-friend__avatar"></div>
+                                <div class="adduser-friend__info">
+                                    <p class="adduser-friend__name">olga</p>
+                                    <p class="adduser-friend__status">Onlain</p>
+                                </div>
+                            </div>
+                            <div class="adduser__control-pannel">
+                                <span class="icon-dop icon__options icon-dop-exit adduser__control-pannel--icon"></span>
+                                <span class="icon icon__options icon__mic adduser__control-pannel--icon"></span>
+                                <span class="icon icon__options icon__mic-off  adduser__control-pannel--icon is-hidden"></span>
 
+                                <span class="icon icon__options icon__mail adduser__control-pannel--icon"></span>
+                                <button class="btn adduser__btn"><span class="adduser__btn--text">Call</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border__label">
+                        <p class="border__label--text">Yesterday</p>
+                        <span class="adduser-border settings-block__border"></span>
+                    </div>
+                    <div class="input-text-wrapper"><input class="adduser__input" type="text"></div>
                 </div>
                 <div class="icon icon__options icon__adduser"></div></div>
             <div >
@@ -103,9 +129,7 @@
                     <div class="volumebox__screen">
                         <label for="volumescreen" class="volume__subtitle subtitle">Screen</label>
                         <input class="slider" id="volumescreen" type="range" value="50">
-                        <!-- <div class="slidecontainer">
 
-                        </div> -->
                     </div>
                     <div class="volumebox__group">
                         <label for="volumegroup" class="volume__subtitle subtitle">Group</label>
