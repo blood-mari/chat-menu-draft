@@ -1,0 +1,216 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+h2,
+h3,
+p,
+h1,
+a,
+b,
+ul,
+div,
+input,
+label,
+div {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    max-width: 100%;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+  }
+
+:root {
+    --main-font-family:'Fugaz One', cursive;
+    --dop-font-family: 'Poppins', sans-serif;
+
+    --main-font-color: rgba(30,50,100,1);
+    --btn-color:#fff;
+    --accent-color: rgba(80, 155, 245, 1);
+    --bgr-color: rgba(255,239,92,0.09);
+    --bgr-sec-color: rgba(118, 106, 0, 0.44);
+    --bgr-icon-color: #C4C4C4;
+    --bgr-blur-effect: blur(6px);
+
+    --btn-hover-color: rgba(240, 55, 165, 1);
+    --active-color: rgba(216, 35, 142, 1);
+
+    --blur-wind-effect: blur(6px);
+}
+
+body {
+    background: top url(./images/bgr-img/yellowbgr.png);
+    background-size: cover;
+
+    font-family: var(--main-font-family);
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5em;
+    letter-spacing: 0.03em;
+}
+
+.push-window {
+    background-color: var(--bgr-color);
+    backdrop-filter: var(--blur-wind-effect);
+
+    border: 8px solid var(--accent-color);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.start-push--window {
+
+    min-width: 384px;
+    min-height: 167px;
+    padding: 26px 31px;
+
+    text-align: center;
+}
+
+.start-push--window::before {
+    background-color: var(--bgr-sec-color);
+    filter: blur(80px);
+}
+
+.start-push-up--text {
+    text-transform: uppercase;
+}
+
+.mainbtn {
+    padding: 16px 10px;
+    min-width: 123px;
+    min-height: 45px;
+
+    font-size: 12px;
+    color: var(--btn-color);
+    text-transform: uppercase;
+    line-height: 1.1em;
+    font-weight: 400;
+    transform: skewX(-10deg);
+
+    background-color: var(--accent-color);
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.push-up__btn {
+    margin-top: 18px;
+}
+
+.mainbtn:hover, .mainbtn:focus {
+    background-color: var(--btn-hover-color);
+}
+
+.mainbtn:active {
+    background-color: var(--active-color);
+}
+
+.is-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.gallery__container {
+    box-shadow: 54px 8px 88px rgba(118, 106, 0, 0.38);
+    min-width: 560px;
+    min-height: 559px;
+    text-align: center;
+    padding: 36px 28px;
+}
+
+.gallery__title {
+    font-size: 24px;
+    line-height: 1.3em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.gallery__text {
+    font-size: 14px;
+    line-height: 1.1em;
+    font-family: var(--dop-font-family);
+    margin-bottom: 24px;
+}
+
+.gallery__wrapper {
+
+    width: 532px;
+    min-height: 168px;
+    /* background-color: rgba(0,0,0,.7);
+    background-blend-mode: darken; */
+
+    display: flex;
+    padding: 0;
+    padding: 0;
+
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-left: 16px;
+    margin-bottom: -16px;
+}
+
+.gallery__icon {
+    width: calc(100% / 7);
+    max-width: 60px;
+    max-height: 60px;
+    border: 2px solid var(--accent-color);
+    box-shadow: inset 0px 0px 2px rgba(29, 58, 92, 0.7);
+    background: var(--bgr-icon-color);
+    margin-right: 16px;
+    margin-bottom: 16px;
+
+}
+
+.galllery__btn {
+    margin-top: 25px;
+}
+
+.gallery__icon:hover, .gallery__icon:focus {
+    /* transform: scale(1.6, 1.6); */
+    outline: none;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 3px solid var(--btn-color);
+    /* box-shadow: 0 0 99999px rgba(255, 239, 92, 0.46); */
+     /* background-blend-mode: darken; */
+}
+
+.gallery__icon-active {
+    box-shadow: inset 2px 2px 6px rgba(80, 16, 54, 1);
+    outline: none;
+}
+
+/* затенение бекграунда при клике или наведении на иконку
+{background: rgba(255, 239, 92, 0.46);
+backdrop-filter: blur(6px);}
+
+*/
+

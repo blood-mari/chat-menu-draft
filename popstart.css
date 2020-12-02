@@ -1,0 +1,87 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+h2,
+h3,
+p,
+h1,
+a,
+b,
+ul,
+div,
+input,
+label,
+div {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    max-width: 100%;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+  }
+
+  :root {
+    --main-font-family: 'Fugaz One', cursive;
+  }
+
+  body {
+    background: top url(./images/bgr-img/POP_Mid_Year_Party_Yellow_RGB1.png);
+    background-size: cover;
+
+    font-family: var(--main-font-family);
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5em;
+    letter-spacing: 0.03em;
+}
+
+.load--container {
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translate(-50%, -7%) skewX(-15deg);
+    z-index: 3;
+    border: 4px solid #509BF5;
+    width: 887px;
+    height: 40px;
+
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load--title {
+    text-transform: uppercase;
+    color: #509BF5;
+}
+
+.start-loading {
+    background-color: #F037A5;
+    border-color: transparent;
+}
+
+.start-loading .load--title {
+    color: rgba(250,230,45,1);
+}
